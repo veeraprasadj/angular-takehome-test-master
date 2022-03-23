@@ -1,0 +1,21 @@
+<!-- 3. TODO Display the properties of the selected customer -->
+<div *ngIf="selectedCustomer; else NoCustomerSelected">
+  <ul>
+    <li>
+      Customer Id: <b>{{ selectedCustomer.id }}</b>
+    </li>
+    <li>
+      Customer Name: <b>{{ selectedCustomer.name }}</b>
+    </li>
+    <li>
+      Customer Address:<b>{{ selectedCustomer.address }}</b>
+    </li>
+    <li>
+      Customer City: <b>{{ selectedCustomer.city }}</b>
+    </li>
+    <li>
+      Customer Country:<b>{{ selectedCustomer.country }}</b>
+    </li>
+  </ul>
+</div>
+<ng-template #NoCustomerSelected> No customer is selected </ng-template>
